@@ -12,45 +12,28 @@
     tools:context="com.example.alin.memoxvp.About"
     tools:showIn="@layout/activity_about">
 
+                 <!--WebView code-->
     <WebView
         android:id="@+id/webView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textStyle="bold"
         android:textColor="#ff000000"
-        android:scrollbars="none"/>
+        android:scrollbars="none"
+        android:textAlignment="gravity"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+               <!--WebView code-->
 
-   <!-- <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="MemoxVP"
-        android:id="@+id/textView"
-        android:textStyle="bold"
-        android:textColor="#ff000000"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />-->
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_centerInParent="true"
-        android:text=""
-        android:id="@+id/textView2"
-        android:gravity="center"
-
-        android:textColor="#ff000000"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text=""
-        android:id="@+id/textView3"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ff000000"/>
-
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text=""-->
+        <!--android:textSize="18dp"-->
+        <!--android:id="@+id/txtAbout"-->
+        <!--android:textColor="#ff000000"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true" />-->
 
 </RelativeLayout>
