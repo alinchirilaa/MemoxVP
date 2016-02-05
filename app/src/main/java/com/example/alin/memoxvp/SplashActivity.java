@@ -16,20 +16,15 @@ public class SplashActivity extends AppCompatActivity{
             @Override
             public void run() {
                 try{
-
-                    sleep(1000);
+                    sleep(1700);
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally {
                     Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(intent);
                 }
-
             }
         }.start();
-
-
-
     }
 
     @Override
