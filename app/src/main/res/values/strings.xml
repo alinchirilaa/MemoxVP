@@ -8,4 +8,31 @@
     <string name="title_activity_about">About</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="title_activity_splashscreen">Splashscreen</string>
+    <string name="about_main"></string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="info_title">Memox VP</string>
+    <string name="info_srl">MEMOX VISION SRL</string>
+    <string name="info_description">Aplicația MemoX VP a fost concepută pentru a ușura activitatea persoanelor care activează în domeniul
+        financiar contabil și nu numai.
+        Scopul acesteia este să reducă timpul petrecut pe site-urile
+        instituțiilor publice pentru verificarea clienților și furnizorilor unei organizații
+        în vederea obținerii de informații cu privire la: datele de identificare, status
+        (activ/inactiv, insolvență), înregistrarea TVA / TVAI, cod VIES.
+        Cum în practică pot interveni destul de frecvent modificări ale
+        datelor agenților economici, un astfel de instrument reprezintă o necesitate.
+
+        În acest scop oferim organizațiilor posibilitatea de a-și verifica în timp real și cu o economie de
+        timp considerabilă întreaga baza de date de clienți și furnizori cu care acestea colaborează.
+
+        Sursele de date utilizate sunt: Ministerul de Finanțe (MF),
+        Agenția Națională de Administrare Fiscală (ANAF), Oficiul Național al Registrului Comerțului (ONRC) și Baze de date proprii.
+        Se verifică datele înregistrate la Ministerul de Finanțe (datele de identificare, TVA, TVAI),
+        în Registrul contribuabililor inactivi/reactivați, în Registrul persoanelor impozabile care aplică sistemul de TVA la încasare,
+        Buletinul Insolvenței, iar pentru partenerii externi se validează numărul de înregistrare pentru TVA-VIES.
+
+
+
+
+</string>
 </resources>
