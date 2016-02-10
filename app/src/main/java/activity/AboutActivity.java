@@ -1,4 +1,4 @@
-package com.example.alin.memoxvp;
+package activity;
 
 
 import android.app.PendingIntent;
@@ -20,7 +20,9 @@ import android.widget.Button;
 import android.graphics.BitmapFactory;
 import android.widget.TextView;
 
-public class About extends AppCompatActivity {
+import com.example.alin.memoxvp.R;
+
+public class AboutActivity extends AppCompatActivity {
 
     private final String url = "http://www.memox.ro/";
 
@@ -42,7 +44,7 @@ public class About extends AppCompatActivity {
 
 
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(About.this ,R.style.AppCompatAlertDialogStyle);
+                AlertDialog.Builder builder = new AlertDialog.Builder(AboutActivity.this ,R.style.AppCompatAlertDialogStyle);
                 builder.setTitle(R.string.info_title);
                 builder.setMessage(R.string.info_description);
                 builder.setPositiveButton(R.string.ok,null);

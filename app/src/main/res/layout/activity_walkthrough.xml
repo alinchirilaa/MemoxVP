@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="false">
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+            
+            <View
+                android:id="@+id/first_indicator"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/circle">
+            </View>
+
+            <View
+                android:id="@+id/second_indicator"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/circle">
+            </View>
+
+            <View
+                android:id="@+id/third_indicator"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/circle">
+            </View>
+
+            <View
+                android:id="@+id/fourth_indicator"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/circle">
+            </View>
+
+
+
+        </LinearLayout>
+        
+    </android.support.v4.view.ViewPager>
+
+</FrameLayout>
