@@ -1,4 +1,4 @@
-package com.example.alin.memoxvp;
+package activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,7 +20,7 @@ public class SplashActivity extends AppCompatActivity{
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally {
-                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                    Intent intent = new Intent(getApplicationContext(),WalkthroughActivity.class);
                     startActivity(intent);
                 }
             }
