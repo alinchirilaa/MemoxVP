@@ -14,6 +14,7 @@ import android.support.customtabs.CustomTabsSession;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,16 @@ public class AboutActivity extends AppCompatActivity {
     private final String url = "http://www.memox.ro/";
 
     private CustomTabsClient mClient;
+    private CustomTabsSession mCustomTabsSession;
+    private static final String TAG = "About";
+
+    private static class NavigationCallback extends CustomTabsCallback {
+        @Override
+        public void onNavigationEvent(int navigationEvent, Bundle extras) {
+            Log.w(TAG, "onNavigationEvent: Code = " + navigationEvent);
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,13 +100,13 @@ public class AboutActivity extends AppCompatActivity {
         }
     }
 
-    public CustomTabsSession getSession(){
-        return mClient.newSession(new CustomTabsCallback(){
-            @Override
-            public void onNavigationEvent(int navigationEvent, Bundle extras) {
-                super.onNavigationEvent(navigationEvent, extras);
-            }
-        });
+    private CustomTabsSession getSession() {
+        if (mClient == null) {
+            mCustomTabsSession = null;
+        } else if (mCustomTabsSession == null) {
+            mCustomTabsSession = mClient.newSession(new NavigationCallback());
+        }
+        return mCustomTabsSession;
     }
 
     public void loadCustomTabs(View view){

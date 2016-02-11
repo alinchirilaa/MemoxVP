@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import fragment.WalkthroughActivity;
+
 /**
  * Created by vasin on 2/5/2016.
  */
@@ -20,7 +22,7 @@ public class SplashActivity extends AppCompatActivity{
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally {
-                    Intent intent = new Intent(getApplicationContext(),WalkthroughActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
                 }
             }
