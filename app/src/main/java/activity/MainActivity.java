@@ -76,13 +76,13 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_about) {
             startActivity(new Intent(this, AboutActivity.class));
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_reports) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_companies) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_customers) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_prices) {
 
         } else if (id == R.id.nav_send) {
 

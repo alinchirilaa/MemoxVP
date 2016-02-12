@@ -48,7 +48,6 @@ public class AboutActivity extends AppCompatActivity {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
-
         Button moreDetailsButton = (Button) findViewById(R.id.button_about);
         moreDetailsButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -58,7 +57,7 @@ public class AboutActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(AboutActivity.this ,R.style.AppCompatAlertDialogStyle);
                 builder.setTitle(R.string.info_title);
                 builder.setMessage(R.string.info_description);
-                builder.setPositiveButton(R.string.ok,null);
+                builder.setPositiveButton(R.string.ok, null);
                 builder.show();
             }
 
@@ -119,7 +118,6 @@ public class AboutActivity extends AppCompatActivity {
         mBuilder.setExitAnimations(this, R.anim.slide_in_left, R.anim.slide_out_right);
         CustomTabsIntent mIntent = mBuilder.build();
         mIntent.launchUrl(this, Uri.parse(url));
-
     }
 
     private PendingIntent setMenuItem() {

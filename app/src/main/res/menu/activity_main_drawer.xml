@@ -7,17 +7,21 @@
             android:icon="@drawable/ic_description_black_24dp"
             android:title="Despre Aplicatie" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/reports"
+            android:title="Vezi rapoarte" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_companies"
+            android:icon="@drawable/check_companies"
+            android:title="Verifica firme" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_customers"
+            android:icon="@drawable/customers"
+            android:title="Clienti" />
+        <item
+            android:id="@+id/nav_prices"
+            android:icon="@drawable/price"
+            android:title="Preturi" />
     </group>
 
     <item android:title="Communicate">
