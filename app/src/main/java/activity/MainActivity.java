@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -76,18 +74,13 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_about) {
             startActivity(new Intent(this, AboutActivity.class));
-        } else if (id == R.id.nav_reports) {
-
-        } else if (id == R.id.nav_companies) {
-
-        } else if (id == R.id.nav_customers) {
-
-        } else if (id == R.id.nav_prices) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_verificaCUI) {
+            startActivity(new Intent(this, ResultActivity.class));
+        } else if (id == R.id.nav_cautaDen) {
 
         }
-
+          else if (id == R.id.nav_prices) {
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
