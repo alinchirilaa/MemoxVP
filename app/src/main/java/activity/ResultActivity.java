@@ -5,7 +5,9 @@ import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.alin.memoxvp.R;
 
@@ -19,6 +21,11 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         // we will using AsyncTask during parsing
         new AsyncTaskParseJson().execute();
@@ -26,20 +33,16 @@ public class ResultActivity extends AppCompatActivity {
 
     // you can make this class as another java file so it will be separated from your main activity.
     public class AsyncTaskParseJson extends AsyncTask<String, String, JSONObject> {
-        String url = "";  //JSON string url
-        private ProgressDialog progressDialog = new ProgressDialog(ResultActivity.this);
+        String url = "http://www.memox.ro/mfin/mobileMfin.php";  //JSON string url
+        private ProgressDialog progressDialog = null;
         // contacts JSONArray
         JSONObject jsonobj = null;
 
         @Override
         protected void onPreExecute() {
-            progressDialog.setMessage("Downloading articles...");
-            progressDialog.show();
-            progressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                public void onCancel(DialogInterface arg0) {
-                    AsyncTaskParseJson.this.cancel(true);
-                }
-            });
+            super.onPreExecute();
+            progressDialog = ProgressDialog.show(ResultActivity.this,
+                    "Fetching from Memox", "Please wait ...");
         }
 
         @Override
@@ -48,8 +51,8 @@ public class ResultActivity extends AppCompatActivity {
                 JSONParser jParser = new JSONParser();
 
                 // get json string from url
-                JSONObject json = jParser.getJSONFromUrl(url);
-                return json;
+                jsonobj = jParser.getJSONFromUrl(url);
+                return jsonobj;
                 // get the array of users
                 //jsonobj = json.getJSONObject(String.valueOf(json));
         }
@@ -58,6 +61,7 @@ public class ResultActivity extends AppCompatActivity {
         protected void onPostExecute(JSONObject result) {
             super.onPostExecute(result);
             progressDialog.dismiss();
+            Toast.makeText(getApplicationContext(), jsonobj.toString().substring(1,jsonobj.toString().length()-1), Toast.LENGTH_SHORT).show();
             Log.d("onPostExecute", result.toString());
         }
     }

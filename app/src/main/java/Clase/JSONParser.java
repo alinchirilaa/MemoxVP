@@ -38,6 +38,8 @@ public class JSONParser {
             HttpPost httpPost = new HttpPost(url);
 
             HttpResponse httpResponse = httpClient.execute(httpPost);
+
+
             HttpEntity httpEntity = httpResponse.getEntity();
             is = httpEntity.getContent();
 
