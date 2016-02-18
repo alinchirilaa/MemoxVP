@@ -73,13 +73,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_about) {
-            startActivity(new Intent(this, AboutActivity.class));
-        } else if (id == R.id.nav_verificaCUI) {
             startActivity(new Intent(this, ResultActivity.class));
-        } else if (id == R.id.nav_cautaDen) {
+        } else if (id == R.id.nav_about) {
 
-        }
-          else if (id == R.id.nav_prices) {
+//        } else if (id == R.id.nav_cautaDen) {
+//
+//        }
+        } else if (id == R.id.nav_prices) {
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
