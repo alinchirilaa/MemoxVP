@@ -1,4 +1,4 @@
-package activity;
+package fragment;
 
 import android.graphics.Color;
 import android.graphics.Typeface;

@@ -35,4 +35,7 @@
 
 
 </string>
+    <string name="title_activity_customers">CustomersActivity</string>
+    <string name="title_activity_customers2">CustomersActivity2</string>
+    <string name="title_activity_result">ResultActivity</string>
 </resources>
