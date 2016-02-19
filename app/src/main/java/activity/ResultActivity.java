@@ -26,7 +26,7 @@ import adapter.ResultRecycleViewAdapter;
 
 public class ResultActivity extends AppCompatActivity {
     private ProgressDialog progressDialog = null;
-    private List<Client> feedsList;
+    private List<RecyclerItem> feedsList;
     private RecyclerView mRecyclerView;
     private ResultRecycleViewAdapter adapter;
 
@@ -45,7 +45,7 @@ public class ResultActivity extends AppCompatActivity {
 
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-
+        mRecyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
@@ -83,7 +83,7 @@ public class ResultActivity extends AppCompatActivity {
         protected void onPostExecute(JSONObject result) {
             super.onPostExecute(result);
             progressDialog.dismiss();
-            adapter = new ResultRecycleViewAdapter(feedsList, ResultActivity.this);
+            adapter = new ResultRecycleViewAdapter(feedsList);
             mRecyclerView.setAdapter(adapter);
 
 
@@ -98,29 +98,23 @@ public class ResultActivity extends AppCompatActivity {
     private void parseResult(JSONObject response) {
 
 
-        feedsList = new ArrayList<Client>();
+        feedsList = new ArrayList<RecyclerItem>();
 
-        // for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < response.names().length(); i++) {
 
-        Client item = new Client();
-        if (response.optString("Denumire_Agent") != null) {
-            item.setDenumireAgent(response.optString("Denumire_Agent"));
+
+            RecyclerItem item = new RecyclerItem();
+            try {
+                String field = response.names().getString(i);
+                item.setText(response.optString(field));
+                item.setThumbnail(R.drawable.info_icon);
+                feedsList.add(item);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
 
-        if (response.optString("Adresa") != null) {
-            item.setAdresa(response.optString("Adresa"));
-        }
 
-        if (response.optString("Cod_Fiscal") != null) {
-            item.setCodFiscal(response.optString("Cod_Fiscal"));
-        }
-
-        if (response.optString("Localitate") != null) {
-            item.setLocalitate(response.optString("Localitate"));
-        }
-
-        feedsList.add(item);
-        //}
     }
 
 

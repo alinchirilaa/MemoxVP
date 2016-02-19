@@ -19,38 +19,29 @@ import POJOs.RecyclerItem;
 
 public class ResultRecycleViewAdapter extends RecyclerView.Adapter<ResultRecycleViewAdapter.ResultViewHolder> {
 
-    private List<Client> recyclerItemList;
-    private Context mContext;
+    private List<RecyclerItem> recyclerItemList;
 
-    public ResultRecycleViewAdapter(List<Client> recyclerItemList, Context mContext) {
+    public ResultRecycleViewAdapter(List<RecyclerItem> recyclerItemList) {
         this.recyclerItemList = recyclerItemList;
-        this.mContext = mContext;
     }
 
     @Override
     public ResultViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.client_row, null);
 
-        ResultViewHolder resultViewHolder = new ResultViewHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_layout, parent, false);
 
-        return resultViewHolder;
+        return new ResultViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ResultViewHolder holder, int position) {
 
 
-        Client recyclerItem = recyclerItemList.get(position);
+        RecyclerItem recyclerItem = recyclerItemList.get(position);
 
-        holder.imageViewDenumireAgent.setImageResource(R.drawable.info_icon);
-        holder.imageViewCodFiscal.setImageResource(R.drawable.fiscal_icon);
-        holder.imageViewAdresa.setImageResource(R.drawable.adress_icon);
-        holder.imageViewLocalitate.setImageResource(R.drawable.city_icon);
+        holder.imageViewThumbnail.setImageResource(recyclerItem.getThumbnail());
+        holder.textView.setText(recyclerItem.getText());
 
-        holder.textViewDenumireAgent.setText(recyclerItem.getDenumireAgent());
-        holder.textViewCodFiscal.setText(recyclerItem.getCodFiscal());
-        holder.textViewAdresa.setText(recyclerItem.getAdresa());
-        holder.textViewLocalitate.setText(recyclerItem.getLocalitate());
 
     }
 
@@ -61,30 +52,20 @@ public class ResultRecycleViewAdapter extends RecyclerView.Adapter<ResultRecycle
 
 
     public class ResultViewHolder extends RecyclerView.ViewHolder {
-        protected ImageView imageViewDenumireAgent;
-        protected ImageView imageViewCodFiscal;
-        protected ImageView imageViewAdresa;
-        protected ImageView imageViewLocalitate;
 
-        protected TextView textViewDenumireAgent;
-        protected TextView textViewCodFiscal;
-        protected TextView textViewAdresa;
-        protected TextView textViewLocalitate;
+        protected ImageView imageViewThumbnail;
+        protected TextView textView;
+
 
         public ResultViewHolder(View view) {
             super(view);
-            this.imageViewDenumireAgent = (ImageView) view.findViewById(R.id.thumbnail);
-            this.imageViewCodFiscal = (ImageView) view.findViewById(R.id.thumbnail_cod_fiscal);
-            this.imageViewAdresa = (ImageView) view.findViewById(R.id.thumbnail_adresa);
-            this.imageViewLocalitate = (ImageView) view.findViewById(R.id.thumbnail_localitate);
+            this.imageViewThumbnail = (ImageView) view.findViewById(R.id.thumbnail);
+            this.textView = (TextView) view.findViewById(R.id.title);
 
-            this.textViewDenumireAgent = (TextView) view.findViewById(R.id.title);
-            this.textViewCodFiscal = (TextView) view.findViewById(R.id.title_adresa);
-            this.textViewAdresa = (TextView) view.findViewById(R.id.title_cod_fiscal);
-            this.textViewLocalitate = (TextView) view.findViewById(R.id.title_localitate);
         }
-    }
 
+
+    }
 
     public void clearRecycler() {
         int size = recyclerItemList.size();
@@ -94,5 +75,4 @@ public class ResultRecycleViewAdapter extends RecyclerView.Adapter<ResultRecycle
         }
 
     }
-
 }

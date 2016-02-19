@@ -1,26 +1,24 @@
 package POJOs;
 
-/**
- * Created by vasin on 2/19/2016.
- */
+
 public class RecyclerItem {
 
-    private String title;
-    private String thumbnail;
+    private String text;
+    private int thumbnail;
 
-    public String getTitle() {
-        return title;
+    public String getText() {
+        return text;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setText(String text) {
+        this.text = text;
     }
 
-    public String getThumbnail() {
+    public int getThumbnail() {
         return thumbnail;
     }
 
-    public void setThumbnail(String thumbnail) {
+    public void setThumbnail(int thumbnail) {
         this.thumbnail = thumbnail;
     }
 
