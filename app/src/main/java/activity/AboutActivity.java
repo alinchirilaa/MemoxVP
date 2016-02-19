@@ -53,8 +53,7 @@ public class AboutActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(AboutActivity.this ,R.style.AppCompatAlertDialogStyle);
+                AlertDialog.Builder builder = new AlertDialog.Builder(AboutActivity.this, R.style.AppCompatAlertDialogStyle);
                 builder.setTitle(R.string.info_title);
                 builder.setMessage(R.string.info_description);
                 builder.setPositiveButton(R.string.ok, null);
@@ -71,12 +70,12 @@ public class AboutActivity extends AppCompatActivity {
 
             @Override
             public void onServiceDisconnected(ComponentName name) {
-                    mClient = null;
+                mClient = null;
             }
         };
 
         String packageName = "com.android.chrome";
-        CustomTabsClient.bindCustomTabsService(this,packageName,mConnection);
+        CustomTabsClient.bindCustomTabsService(this, packageName, mConnection);
 
 
         TextView textViewSRL = (TextView) findViewById(R.id.about_srl);
@@ -85,16 +84,13 @@ public class AboutActivity extends AppCompatActivity {
         TextView textViewAdresa = (TextView) findViewById(R.id.about_adresa);
 
 
-
-
-
     }
 
-    public void prefetchContent(View view){
+    public void prefetchContent(View view) {
         if (mClient != null) {
             mClient.warmup(0);
             CustomTabsSession customTabsSession = getSession();
-            customTabsSession.mayLaunchUrl(Uri.parse(url),null,null);
+            customTabsSession.mayLaunchUrl(Uri.parse(url), null, null);
 
         }
     }
@@ -108,7 +104,7 @@ public class AboutActivity extends AppCompatActivity {
         return mCustomTabsSession;
     }
 
-    public void loadCustomTabs(View view){
+    public void loadCustomTabs(View view) {
         CustomTabsIntent.Builder mBuilder = new CustomTabsIntent.Builder(getSession());
         mBuilder.setToolbarColor(getResources().getColor(R.color.colorPrimary));
         mBuilder.setCloseButtonIcon(BitmapFactory.decodeResource(getResources(),
@@ -127,7 +123,6 @@ public class AboutActivity extends AppCompatActivity {
         shareIntent.putExtra(Intent.EXTRA_TEXT, url);
         return PendingIntent.getActivity(this, 0, shareIntent, 0);
     }
-
 
 
     @Override

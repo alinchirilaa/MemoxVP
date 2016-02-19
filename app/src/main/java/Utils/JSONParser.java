@@ -1,5 +1,7 @@
 package Utils;
 
+
+
 import android.util.Log;
 
 import org.apache.http.HttpEntity;
@@ -14,11 +16,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 
-/**
- * Created by Alin on 2/16/2016.
- */
+
 public class JSONParser {
     static InputStream is = null;
     static JSONObject jObj = null;
@@ -70,7 +73,5 @@ public class JSONParser {
         }
         // return JSON String
         return jObj;
-        }
     }
-
-
+}
