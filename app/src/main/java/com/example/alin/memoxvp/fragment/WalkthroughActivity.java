@@ -1,4 +1,4 @@
-package fragment;
+package com.example.alin.memoxvp.fragment;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.example.alin.memoxvp.R;
 
-import adapter.WalkthroughAdapter;
+import com.example.alin.memoxvp.adapter.WalkthroughAdapter;
 
 /**
  * Created by vasin on 2/10/2016.

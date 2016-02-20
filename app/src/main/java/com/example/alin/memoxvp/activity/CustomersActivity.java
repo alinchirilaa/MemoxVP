@@ -1,9 +1,6 @@
-package activity;
+package com.example.alin.memoxvp.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -13,8 +10,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.example.alin.memoxvp.R;
-
-import adapter.ImageAdapter;
+import com.example.alin.memoxvp.adapter.ImageAdapter;
 
 public class CustomersActivity extends AppCompatActivity {
 

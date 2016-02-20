@@ -1,4 +1,4 @@
-package adapter;
+package com.example.alin.memoxvp.adapter;
 
 import android.content.Context;
 import android.view.View;

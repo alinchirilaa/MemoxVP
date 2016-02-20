@@ -1,4 +1,4 @@
-package activity;
+package com.example.alin.memoxvp.activity;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
@@ -10,19 +10,16 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.alin.memoxvp.POJOs.RecyclerItem;
 import com.example.alin.memoxvp.R;
+import com.example.alin.memoxvp.Utils.JSONParser;
+import com.example.alin.memoxvp.adapter.ResultRecycleViewAdapter;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import POJOs.Client;
-import POJOs.RecyclerItem;
-import Utils.JSONParser;
-import adapter.ResultRecycleViewAdapter;
 
 public class ResultActivity extends AppCompatActivity {
     private ProgressDialog progressDialog = null;

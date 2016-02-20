@@ -1,4 +1,4 @@
-package activity;
+package com.example.alin.memoxvp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;

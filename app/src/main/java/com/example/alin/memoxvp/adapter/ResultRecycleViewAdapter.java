@@ -1,7 +1,5 @@
-package adapter;
+package com.example.alin.memoxvp.adapter;
 
-import android.content.Context;
-import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +11,7 @@ import com.example.alin.memoxvp.R;
 
 import java.util.List;
 
-import POJOs.Client;
-import POJOs.RecyclerItem;
+import com.example.alin.memoxvp.POJOs.RecyclerItem;
 
 
 public class ResultRecycleViewAdapter extends RecyclerView.Adapter<ResultRecycleViewAdapter.ResultViewHolder> {

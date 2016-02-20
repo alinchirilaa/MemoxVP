@@ -1,4 +1,4 @@
-package POJOs;
+package com.example.alin.memoxvp.POJOs;
 
 
 public class Client {

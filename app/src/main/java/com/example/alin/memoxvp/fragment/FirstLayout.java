@@ -1,4 +1,4 @@
-package fragment;
+package com.example.alin.memoxvp.fragment;
 
 import android.graphics.Typeface;
 import android.os.Bundle;

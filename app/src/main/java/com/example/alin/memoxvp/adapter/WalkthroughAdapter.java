@@ -1,14 +1,13 @@
-package adapter;
+package com.example.alin.memoxvp.adapter;
 
 import android.graphics.Typeface;
-import android.graphics.pdf.PdfDocument;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import fragment.FirstLayout;
-import fragment.SecondLayout;
-import fragment.ThirdLayout;
+import com.example.alin.memoxvp.fragment.FirstLayout;
+import com.example.alin.memoxvp.fragment.ThirdLayout;
+import com.example.alin.memoxvp.fragment.SecondLayout;
 
 /**
  * Created by vasin on 2/10/2016.
