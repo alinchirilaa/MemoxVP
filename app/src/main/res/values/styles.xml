@@ -43,4 +43,19 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="AppTheme.Dialog" parent="AppTheme.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:textColorHint">#FFFFFF</item>
+        <item name="android:windowBackground">@color/dialog_background_scrim</item>
+        <!--<item name="android:windowAnimationStyle">@null</item>-->
+        <!--<item name="android:windowContentTransitions">true</item>-->
+    </style>
+
+    <!-- Magic FAB attributes -->
+    <declare-styleable name="MagicFAB">
+        <attr name="fab_color" format="integer" />
+        <attr name="fab_icon" format="integer" />
+        <attr name="reveal_color" format="integer" />
+    </declare-styleable>
+
 </resources>

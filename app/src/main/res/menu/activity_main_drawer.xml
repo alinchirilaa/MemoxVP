@@ -2,23 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_about"
-            android:icon="@drawable/ic_description_black_24dp"
-            android:title="Despre Aplicatie" />
-        <item
-            android:id="@+id/nav_verificaCUI"
-            android:icon="@drawable/check_companies"
-            android:title="Verifica Cui" />
-        <item
-            android:id="@+id/nav_cautaDen"
-            android:icon="@drawable/cauta_den"
-            android:title="Cauta denumire" />
 
+        <item
+            android:id="@+id/nav_HOME"
+            android:icon="@drawable/price"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_clients"
+            android:icon="@drawable/ic_description_black_24dp"
+            android:title="Clients" />
         <item
             android:id="@+id/nav_prices"
             android:icon="@drawable/price"
-            android:title="Preturi" />
+            android:title="Prices" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_description_black_24dp"
+            android:title="About" />
+
     </group>
 
     <item android:title="Communicate">

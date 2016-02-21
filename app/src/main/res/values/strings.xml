@@ -53,4 +53,8 @@
         completions."
     </string>
     <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_magic_fab">MagicFAB</string>
+
+    <string name="transition_dialog">transition_dialog</string>
+
 </resources>

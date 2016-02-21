@@ -7,31 +7,31 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.alin.memoxvp.POJOs.RecyclerItem;
 import com.example.alin.memoxvp.R;
 
 import java.util.List;
 
-import com.example.alin.memoxvp.POJOs.RecyclerItem;
-
-
-public class ResultRecycleViewAdapter extends RecyclerView.Adapter<ResultRecycleViewAdapter.ResultViewHolder> {
-
+/**
+ * Created by vasin on 2/21/2016.
+ */
+public class MainRecycleViewAdapter extends RecyclerView.Adapter<MainRecycleViewAdapter.MainViewHolder> {
     private List<RecyclerItem> recyclerItemList;
 
-    public ResultRecycleViewAdapter(List<RecyclerItem> recyclerItemList) {
+    public MainRecycleViewAdapter(List<RecyclerItem> recyclerItemList) {
         this.recyclerItemList = recyclerItemList;
     }
 
     @Override
-    public ResultViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MainViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_layout_result, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_layout_main, parent, false);
 
-        return new ResultViewHolder(view);
+        return new MainViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ResultViewHolder holder, int position) {
+    public void onBindViewHolder(MainViewHolder holder, int position) {
 
 
         RecyclerItem recyclerItem = recyclerItemList.get(position);
@@ -48,16 +48,16 @@ public class ResultRecycleViewAdapter extends RecyclerView.Adapter<ResultRecycle
     }
 
 
-    public class ResultViewHolder extends RecyclerView.ViewHolder {
+    public class MainViewHolder extends RecyclerView.ViewHolder {
 
         protected ImageView imageViewThumbnail;
         protected TextView textView;
 
 
-        public ResultViewHolder(View view) {
+        public MainViewHolder(View view) {
             super(view);
-            this.imageViewThumbnail = (ImageView) view.findViewById(R.id.thumbnail);
-            this.textView = (TextView) view.findViewById(R.id.title);
+            this.imageViewThumbnail = (ImageView) view.findViewById(R.id.thumbnail_main);
+            this.textView = (TextView) view.findViewById(R.id.title_main);
 
         }
 
@@ -72,4 +72,5 @@ public class ResultRecycleViewAdapter extends RecyclerView.Adapter<ResultRecycle
         }
 
     }
+
 }

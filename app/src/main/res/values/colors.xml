@@ -5,4 +5,8 @@
 
     <color name="colorAccent">#607D8B</color>
     <color name="splash_background">#009688</color>
+
+    <color name="fab_background_color">@color/colorAccent</color>
+    <color name="dialog_background_color">#FFFFFF</color>
+    <color name="dialog_background_scrim">#99323232</color>
 </resources>

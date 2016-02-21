@@ -48,11 +48,19 @@
             android:name=".activity.ResultActivity"
             android:label="@string/title_activity_result"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".activity.SignUpActivity"
             android:label="@string/title_activity_sign_up"
-            android:theme="@style/LoginTheme"></activity>
+            android:theme="@style/LoginTheme" />
+
+        <activity
+            android:name=".Utils.DialogActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/AppTheme.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
     </application>
 
 </manifest>
