@@ -63,27 +63,27 @@ public class MainActivity extends AppCompatActivity
         adapter = new MainRecycleViewAdapter(createList(0));
         mRecyclerView.setAdapter(adapter);
 
-        magicFAB = (MagicFAB) findViewById(R.id.magic_fab);
-        Intent intent = new Intent(MainActivity.this, ResultActivity.class);
-        magicFAB.setIntent(intent);
-        magicFAB.setOnClickListener(new MagicFAB.OnClickListener(){
-
-            @Override
-            public void onClick(MagicFAB magicFAB, View v) {
-                magicFAB.activityAnimation();
-            }
-        });
-
-
-//        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_morph);
-//        fab.setOnClickListener(new View.OnClickListener() {
+//        magicFAB = (MagicFAB) findViewById(R.id.magic_fab);
+//        Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+//        magicFAB.setIntent(intent);
+//        magicFAB.setOnClickListener(new MagicFAB.OnClickListener(){
+//
 //            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, DialogActivity.class);
-//                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, fab, getString(R.string.transition_dialog));
-//                startActivityForResult(intent, RC_LOGIN, options.toBundle());
+//            public void onClick(MagicFAB magicFAB, View v) {
+//                magicFAB.activityAnimation();
 //            }
 //        });
+
+
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_morph);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DialogActivity.class);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, fab, getString(R.string.transition_dialog));
+                startActivityForResult(intent, RC_LOGIN, options.toBundle());
+            }
+        });
 
 
     }

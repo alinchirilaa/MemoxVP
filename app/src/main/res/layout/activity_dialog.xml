@@ -22,7 +22,16 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
 
-        <!-- email text field -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Căutare"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="?android:textAppearanceLarge"/>
+
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +48,20 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <!-- email text field -->
+        <Button
+            android:id="@+id/search_cui"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/btn_background"
+            android:layout_marginTop="20dp"
+            android:text="Verficare CUI"
+            android:textColor="#FFFFFF"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:onClick="finish"
+            android:textSize="15dp" />
+
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,22 +75,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Denumire Agent"
+
                 android:inputType="text"
                 />
 
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/close"
-            android:layout_width="wrap_content"
+            android:id="@+id/search_agent"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
             android:background="@drawable/btn_background"
             android:layout_marginTop="20dp"
-            android:text="Search"
+            android:text="Verificare Agent"
             android:textColor="#FFFFFF"
+
             android:textAppearance="?android:textAppearanceMedium"
-            android:onClick="finish"/>
+            android:onClick="finish"
+            android:textSize="15dp" />
 
     </LinearLayout>
 

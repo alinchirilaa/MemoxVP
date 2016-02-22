@@ -27,14 +27,21 @@ public class DialogActivity extends AppCompatActivity {
 
         setupSharedElementTransition_1();
 
-        Button closeButton = (Button) findViewById(R.id.close);
-        closeButton.setOnClickListener(new View.OnClickListener() {
+        Button cuiButton = (Button) findViewById(R.id.search_cui);
+        cuiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
 
+        Button agentButton = (Button) findViewById(R.id.search_agent);
+        agentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     public void setupSharedElementTransition_1() {

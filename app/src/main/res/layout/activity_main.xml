@@ -30,27 +30,27 @@
     <include layout="@layout/content_main" />
 
 
-    <com.example.alin.memoxvp.Utils.MagicFAB
-        android:id="@+id/magic_fab"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:fab_icon="@drawable/icon_search"
-        app:fab_color="@color/colorAccent"
-        app:reveal_color="@color/colorPrimary">
+    <!--<com.example.alin.memoxvp.Utils.MagicFAB-->
+        <!--android:id="@+id/magic_fab"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:fab_icon="@drawable/icon_search"-->
+        <!--app:fab_color="@color/colorAccent"-->
+        <!--app:reveal_color="@color/colorPrimary">-->
 
-    </com.example.alin.memoxvp.Utils.MagicFAB>
+    <!--</com.example.alin.memoxvp.Utils.MagicFAB>-->
 
-        <!--<android.support.design.widget.FloatingActionButton-->
-            <!--android:id="@+id/fab_morph"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="bottom|end"-->
-            <!--android:layout_margin="@dimen/fab_margin"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:layout_alignParentEnd="true"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:src="@drawable/icon_search"-->
-            <!--android:transitionName="@string/transition_dialog"/>-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_morph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_search"
+            android:transitionName="@string/transition_dialog"/>
     </RelativeLayout>
 
 
